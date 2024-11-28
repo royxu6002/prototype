@@ -1,0 +1,33 @@
+const product = [
+    {
+        "diameter": "M8",
+        "installation": "Flush",
+        "sensing_distance": "1.5mm",
+        "housing_material": "stainless steel or nickel-plated brass",
+        "indicator": "yes",
+        "operating_voltage": "10-30VDC/5-36VDC/10-55VDC/10-60V",
+        "ripple_voltage": "<10%",
+        "no_load_current": "<10mA",
+        "max_load_current": "200mA",
+        "leakge_current": "<0.01mA",
+        "drpped_voltage": "<1.5V",
+        "switch_frequency": "2KHZ",
+        "response_time": "0.1ms/0.1ms",
+        "switching_hysteresis": "<15% (Sr)",
+        "repeat_accuracy": "<1.0 (Sr)",
+        "protection_level": "IP67",
+        "operating_temperature": "-25℃~70℃",
+        "temperature_drift": "<10% (Sr)",
+        "shortcuit_protection": "YES",
+        "overload_current": "220mA",
+        "facing_material": "POM",
+        "model": "HS-C08-X0X",
+        "connection": "cable exit",
+        "product_picture": "",
+        "dimension_diagram": "",
+        "system_price": "",
+        "franchise_price": ""
+    }
+]
+
+export default product;

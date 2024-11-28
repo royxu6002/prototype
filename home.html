@@ -1,0 +1,828 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>My first Vue app</title>
+  <script src="https://unpkg.com/vue@2"></script>
+  <style>
+  	.ny_nr .cp_xl table tr td {
+    border: 1px solid #e7e7e7;
+    font-size: 12px;
+    text-align: center;
+    line-height: 20px;
+}
+tr td img {
+	height: 50px;
+}
+
+
+#myTable {
+  width: 10px auto;
+  border-collapse: collapse;
+  margin: 10px auto;
+  width: 800px;
+  font-family: arial;
+}
+ 
+#myTable th {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+}
+ 
+#myTable td {
+  background-color: #f2f2f2;
+}
+ 
+#myTable tr:nth-child(odd) td {
+  background-color: #f9f9f9;
+}
+ 
+#myTable tr:nth-child(even) td {
+  background-color: #f0f0f0;
+}
+ 
+#myTable tr.highlight td {
+ 
+}
+table tr:hover {
+  background-color: yellow; /* 更换为你想要的颜色 */
+}
+
+  </style>
+</head>
+
+
+<body>
+<div id="app">
+ 
+  <table id="myTable" width="100%" border="0" cellspacing="0" cellpadding="0">
+
+            <tbody><tr>
+
+              <th scope="col">Picture</th>
+
+              <th scope="col">Diameter</th>
+
+              <th scope="col">Mounting</th>
+
+              <th scope="col">Operating distance/Sn</th>
+
+              <th scope="col">Housing material</th>
+
+              <th scope="col">Operating voltage</th>
+
+              <th scope="col">Output</th>
+
+              <th scope="col">model</th>
+
+              <th scope="col">Connection type</th>
+
+            </tr>
+
+            
+            <tr style="cursor: pointer;" onclick="window.location='http://www.defurotech.com/index.php?id=1336';">
+
+              <td style="width:10%;"><img src="http://www.defurotech.com/data/upload/image/20190116/1547606414648364.jpg"></td>
+
+              <td>M12</td>
+
+              <td>flush</td>
+
+              <td>4mm</td>
+
+              <td>nickel-clad copper</td>
+
+              <td>10-30VDC</td>
+
+              <td>DC 3 Wire</td>
+
+              <td>M12*1*45</td>
+
+              <td>connector</td>
+
+            </tr>
+
+            
+            <tr style="cursor: pointer;" onclick="window.location='http://www.defurotech.com/index.php?id=1335';">
+
+              <td style="width:10%;"><img src="http://www.defurotech.com/data/upload/image/20190116/1547604649618428.jpg"></td>
+
+              <td>M12</td>
+
+              <td>flush</td>
+
+              <td>4mm</td>
+
+              <td>nickel-clad copper</td>
+
+              <td>10-30VDC</td>
+
+              <td>DC 3 Wire</td>
+
+              <td>M12*1*22</td>
+
+              <td>straight line</td>
+
+            </tr>
+
+            
+            <tr style="cursor: pointer;" onclick="window.location='http://www.defurotech.com/index.php?id=1334';">
+
+              <td style="width:10%;"><img src="http://www.defurotech.com/data/upload/image/20190116/1547605072101120.jpg"></td>
+
+              <td>M12</td>
+
+              <td>flush</td>
+
+              <td>2mm</td>
+
+              <td>stainless steel</td>
+
+              <td>10-30VDC</td>
+
+              <td>DC 3 Wire</td>
+
+              <td>M12*1*45</td>
+
+              <td>connector</td>
+
+            </tr>
+
+            
+            <tr style="cursor: pointer;" onclick="window.location='http://www.defurotech.com/index.php?id=1332';">
+
+              <td style="width:10%;"><img src="http://www.defurotech.com/data/upload/image/20190131/1548896172593800.jpg"></td>
+
+              <td>Q8</td>
+
+              <td>flush</td>
+
+              <td>2mm</td>
+
+              <td>stainless steel</td>
+
+              <td>10-30VDC</td>
+
+              <td>DC 3 Wire</td>
+
+              <td>Q8*1*28</td>
+
+              <td>connector</td>
+
+            </tr>
+
+            
+            <tr style="cursor: pointer;" onclick="window.location='http://www.defurotech.com/index.php?id=1331';">
+
+              <td style="width:10%;"><img src="http://www.defurotech.com/data/upload/image/20190131/1548896202936752.jpg"></td>
+
+              <td>Q8</td>
+
+              <td>flush</td>
+
+              <td>2mm</td>
+
+              <td>nickel-clad copper</td>
+
+              <td>10-30VDC</td>
+
+              <td>DC 3 Wire</td>
+
+              <td>Q8*1*16</td>
+
+              <td>connector</td>
+
+            </tr>
+
+            
+            <tr style="cursor: pointer;" onclick="window.location='http://www.defurotech.com/index.php?id=1330';">
+
+              <td style="width:10%;"><img src="http://www.defurotech.com/data/upload/image/20190131/1548896224758695.jpg"></td>
+
+              <td>Q8</td>
+
+              <td>flush</td>
+
+              <td>2mm</td>
+
+              <td>nickel-clad copper</td>
+
+              <td>10-30VDC</td>
+
+              <td>DC 3 Wire</td>
+
+              <td>Q8*1*16</td>
+
+              <td>straight line</td>
+
+            </tr>
+
+            
+            <tr style="cursor: pointer;" onclick="window.location='http://www.defurotech.com/index.php?id=1329';">
+
+              <td style="width:10%;"><img src="http://www.defurotech.com/data/upload/image/20190131/1548896269150874.jpg"></td>
+
+              <td>Q8</td>
+
+              <td>flush</td>
+
+              <td>1mm</td>
+
+              <td>nickel-clad copper</td>
+
+              <td>10-30VDC</td>
+
+              <td>DC 3 Wire</td>
+
+              <td>φ8*1*16</td>
+
+              <td>connector</td>
+
+            </tr>
+
+            
+            <tr style="cursor: pointer;" onclick="window.location='http://www.defurotech.com/index.php?id=1328';">
+
+              <td style="width:10%;"><img src="http://www.defurotech.com/data/upload/image/20190131/1548896307897687.jpg"></td>
+
+              <td>Q8</td>
+
+              <td>flush</td>
+
+              <td>1mm</td>
+
+              <td>nickel-clad copper</td>
+
+              <td>10-30VDC</td>
+
+              <td>DC 3 Wire</td>
+
+              <td>φ8*1*16</td>
+
+              <td>straight line</td>
+
+            </tr>
+
+            
+            <tr style="cursor: pointer;" onclick="window.location='http://www.defurotech.com/index.php?id=1327';">
+
+              <td style="width:10%;"><img src="http://www.defurotech.com/data/upload/image/20240718/1721293820871534.jpg"></td>
+
+              <td>Q8</td>
+
+              <td>flush</td>
+
+              <td>1mm</td>
+
+              <td>nickel-clad copper</td>
+
+              <td>10-30VDC</td>
+
+              <td>DC 3 Wire</td>
+
+              <td>φ8*1*16</td>
+
+              <td>straight line</td>
+
+            </tr>
+
+            
+            <tr style="cursor: pointer;" onclick="window.location='http://www.defurotech.com/index.php?id=1325';">
+
+              <td style="width:10%;"><img src="http://www.defurotech.com/data/upload/image/20190131/1548896407449064.jpg"></td>
+
+              <td>φ8</td>
+
+              <td>flush</td>
+
+              <td>3mm</td>
+
+              <td>stainless steel</td>
+
+              <td>10-30VDC</td>
+
+              <td>DC 3 Wire</td>
+
+              <td>φ8*1*18</td>
+
+              <td>straight line</td>
+
+            </tr>
+
+            
+            <tr style="cursor: pointer;" onclick="window.location='http://www.defurotech.com/index.php?id=1324';">
+
+              <td style="width:10%;"><img src="http://www.defurotech.com/data/upload/image/20190131/1548896439395893.jpg"></td>
+
+              <td>φ8</td>
+
+              <td>flush</td>
+
+              <td>2.0mm</td>
+
+              <td>stainless steel</td>
+
+              <td>10-30VDC</td>
+
+              <td>DC 3 Wire</td>
+
+              <td>M8*1*18</td>
+
+              <td>connector</td>
+
+            </tr>
+
+            
+            <tr style="cursor: pointer;" onclick="window.location='http://www.defurotech.com/index.php?id=1322';">
+
+              <td style="width:10%;"><img src="http://www.defurotech.com/data/upload/image/20240718/1721293960817222.jpg"></td>
+
+              <td>φ8</td>
+
+              <td>flush</td>
+
+              <td>2.0mm</td>
+
+              <td>stainless steel</td>
+
+              <td>10-30VDC</td>
+
+              <td>DC 3 Wire</td>
+
+              <td>M8*1*18</td>
+
+              <td>straight line</td>
+
+            </tr>
+
+            
+            <tr style="cursor: pointer;" onclick="window.location='http://www.defurotech.com/index.php?id=1321';">
+
+              <td style="width:10%;"><img src="http://www.defurotech.com/data/upload/image/20190131/1548896466686606.jpg"></td>
+
+              <td>φ8</td>
+
+              <td>flush</td>
+
+              <td>1mm</td>
+
+              <td>stainless steel</td>
+
+              <td>10-30VDC</td>
+
+              <td>DC 3 Wire</td>
+
+              <td>φ8*1*32</td>
+
+              <td>connector</td>
+
+            </tr>
+
+            
+            <tr style="cursor: pointer;" onclick="window.location='http://www.defurotech.com/index.php?id=1320';">
+
+              <td style="width:10%;"><img src="http://www.defurotech.com/data/upload/image/20190131/1548896476802977.jpg"></td>
+
+              <td>φ8</td>
+
+              <td>flush</td>
+
+              <td>1mm</td>
+
+              <td>stainless steel</td>
+
+              <td>10-30VDC</td>
+
+              <td>DC 3 Wire</td>
+
+              <td>φ8*1*18</td>
+
+              <td>straight line</td>
+
+            </tr>
+
+            
+            <tr style="cursor: pointer;" onclick="window.location='http://www.defurotech.com/index.php?id=1319';">
+
+              <td style="width:10%;"><img src="http://www.defurotech.com/data/upload/image/20190131/1548896491528375.jpg"></td>
+
+              <td>φ8</td>
+
+              <td>flush</td>
+
+              <td>1mm</td>
+
+              <td>stainless steel</td>
+
+              <td>10-30VDC</td>
+
+              <td>DC 3 Wire</td>
+
+              <td>φ8*1*18</td>
+
+              <td>straight line</td>
+
+            </tr>
+
+            
+            <tr style="cursor: pointer;" onclick="window.location='http://www.defurotech.com/index.php?id=1318';">
+
+              <td style="width:10%;"><img src="http://www.defurotech.com/data/upload/image/20190131/1548896631641995.jpg"></td>
+
+              <td>M8</td>
+
+              <td>flush</td>
+
+              <td>2mm</td>
+
+              <td>stainless steel</td>
+
+              <td>10-30VDC</td>
+
+              <td>DC 3 Wire</td>
+
+              <td>M8*1*18</td>
+
+              <td>connector</td>
+
+            </tr>
+
+            
+            <tr style="cursor: pointer;" onclick="window.location='http://www.defurotech.com/index.php?id=1317';">
+
+              <td style="width:10%;"><img src="http://www.defurotech.com/data/upload/image/20190131/1548896653441744.jpg"></td>
+
+              <td>M8</td>
+
+              <td>flush</td>
+
+              <td>2mm</td>
+
+              <td>stainless steel</td>
+
+              <td>10-30VDC</td>
+
+              <td>DC3 wire</td>
+
+              <td>M8*1*18</td>
+
+              <td>connector</td>
+
+            </tr>
+
+            
+            <tr style="cursor: pointer;" onclick="window.location='http://www.defurotech.com/index.php?id=1316';">
+
+              <td style="width:10%;"><img src="http://www.defurotech.com/data/upload/image/20190131/1548896679199405.jpg"></td>
+
+              <td>M8</td>
+
+              <td>flush</td>
+
+              <td>2mm</td>
+
+              <td>stainless steel</td>
+
+              <td>10-30VDC</td>
+
+              <td>DC3 wire</td>
+
+              <td>M8*1*18</td>
+
+              <td>connector</td>
+
+            </tr>
+
+            
+            <tr style="cursor: pointer;" onclick="window.location='http://www.defurotech.com/index.php?id=1315';">
+
+              <td style="width:10%;"><img src="http://www.defurotech.com/data/upload/image/20190131/1548896724798075.jpg"></td>
+
+              <td>M8</td>
+
+              <td>flush</td>
+
+              <td>2mm</td>
+
+              <td>stainless steel</td>
+
+              <td>10-30VDC</td>
+
+              <td>DC3线</td>
+
+              <td>M8*1*18</td>
+
+              <td>straight line</td>
+
+            </tr>
+
+            
+            <tr style="cursor: pointer;" onclick="window.location='http://www.defurotech.com/index.php?id=1314';">
+
+              <td style="width:10%;"><img src="http://www.defurotech.com/data/upload/image/20190131/1548896744436689.jpg"></td>
+
+              <td>M8</td>
+
+              <td>flush</td>
+
+              <td>1mm</td>
+
+              <td>stainless steel</td>
+
+              <td>10-30VDC</td>
+
+              <td>DC3线</td>
+
+              <td>M8*1*18</td>
+
+              <td>connector</td>
+
+            </tr>
+
+            
+            <tr style="cursor: pointer;" onclick="window.location='http://www.defurotech.com/index.php?id=1313';">
+
+              <td style="width:10%;"><img src="http://www.defurotech.com/data/upload/image/20190131/1548896759402716.jpg"></td>
+
+              <td>M8</td>
+
+              <td>flush</td>
+
+              <td>1mm</td>
+
+              <td>stainless steel</td>
+
+              <td>10-30VDC</td>
+
+              <td>DC3 wire</td>
+
+              <td>M8*1*18</td>
+
+              <td>connector</td>
+
+            </tr>
+
+            
+            <tr style="cursor: pointer;" onclick="window.location='http://www.defurotech.com/index.php?id=1312';">
+
+              <td style="width:10%;"><img src="http://www.defurotech.com/data/upload/image/20190131/1548896774212817.jpg"></td>
+
+              <td>M8</td>
+
+              <td>flush</td>
+
+              <td>1mm</td>
+
+              <td>stainless steel</td>
+
+              <td>10-30VDC</td>
+
+              <td>DC3 wire</td>
+
+              <td>M8*1*18</td>
+
+              <td>straight line</td>
+
+            </tr>
+
+            
+            <tr style="cursor: pointer;" onclick="window.location='http://www.defurotech.com/index.php?id=1311';">
+
+              <td style="width:10%;"><img src="http://www.defurotech.com/data/upload/image/20190131/1548896889683019.jpg"></td>
+
+              <td>φ6.5</td>
+
+              <td>flush</td>
+
+              <td>2mm</td>
+
+              <td>stainless steel</td>
+
+              <td>10-30VDC</td>
+
+              <td>DC3 wire</td>
+
+              <td>φ6.5*1*32</td>
+
+              <td>connector</td>
+
+            </tr>
+
+            
+            <tr style="cursor: pointer;" onclick="window.location='http://www.defurotech.com/index.php?id=1310';">
+
+              <td style="width:10%;"><img src="http://www.defurotech.com/data/upload/image/20190131/1548896912812284.png"></td>
+
+              <td>φ6.5Y</td>
+
+              <td>flush</td>
+
+              <td>2mm</td>
+
+              <td>stainless steel</td>
+
+              <td>10-30VDC</td>
+
+              <td>DC3 wire</td>
+
+              <td>φ6.5*1*18</td>
+
+              <td>connector</td>
+
+            </tr>
+
+            
+            <tr style="cursor: pointer;" onclick="window.location='http://www.defurotech.com/index.php?id=1309';">
+
+              <td style="width:10%;"><img src="http://www.defurotech.com/data/upload/image/20190114/1547436214954635.jpg"></td>
+
+              <td>φ6.5Y</td>
+
+              <td>flush</td>
+
+              <td>2mm</td>
+
+              <td>不锈钢</td>
+
+              <td>10-30VDC</td>
+
+              <td>DC3 wire</td>
+
+              <td>φ6.5*1*18</td>
+
+              <td>straight line</td>
+
+            </tr>
+
+            
+            <tr style="cursor: pointer;" onclick="window.location='http://www.defurotech.com/index.php?id=1308';">
+
+              <td style="width:10%;"><img src="http://www.defurotech.com/data/upload/image/20190131/1548896937321623.png"></td>
+
+              <td>φ6.5</td>
+
+              <td>flush</td>
+
+              <td>2mm</td>
+
+              <td>stainless steel</td>
+
+              <td>10-30VDC</td>
+
+              <td>DC3 wire</td>
+
+              <td>φ6.5*1*18</td>
+
+              <td>connector</td>
+
+            </tr>
+
+            
+            <tr style="cursor: pointer;" onclick="window.location='http://www.defurotech.com/index.php?id=1307';">
+
+              <td style="width:10%;"><img src="http://www.defurotech.com/data/upload/image/20190114/1547431735386040.jpg"></td>
+
+              <td>φ6.5</td>
+
+              <td>flush</td>
+
+              <td>2mm</td>
+
+              <td>stainless steel</td>
+
+              <td>10-30VDC</td>
+
+              <td>DC3 wire</td>
+
+              <td>φ6.5*1*18</td>
+
+              <td>straight line</td>
+
+            </tr>
+
+            
+            <tr style="cursor: pointer;" onclick="window.location='http://www.defurotech.com/index.php?id=1306';">
+
+              <td style="width:10%;"><img src="http://www.defurotech.com/data/upload/image/20190131/1548896960290192.jpg"></td>
+
+              <td>φ6.5</td>
+
+              <td>flush</td>
+
+              <td>1mm</td>
+
+              <td>stainless steel</td>
+
+              <td>10-30VDC</td>
+
+              <td>DC3 wire</td>
+
+              <td>φ6.5*1*32</td>
+
+              <td>connector</td>
+
+            </tr>
+
+            
+            <tr style="cursor: pointer;" onclick="window.location='http://www.defurotech.com/index.php?id=1305';">
+
+              <td style="width:10%;"><img src="http://www.defurotech.com/data/upload/image/20190131/1548896980528684.png"></td>
+
+              <td>φ6.5</td>
+
+              <td>flush</td>
+
+              <td>1mm</td>
+
+              <td>stainless steel</td>
+
+              <td>10-30VDC</td>
+
+              <td>DC3 wire</td>
+
+              <td>φ6.5*1*18</td>
+
+              <td>connector</td>
+
+            </tr>
+
+            
+            <tr style="cursor: pointer;" onclick="window.location='http://www.defurotech.com/index.php?id=1303';">
+
+              <td style="width:10%;"><img src="http://www.defurotech.com/data/upload/image/20190111/1547170977660985.jpg"></td>
+
+              <td>φ6.5Y</td>
+
+              <td>flush</td>
+
+              <td>1mm</td>
+
+              <td>stainless steel</td>
+
+              <td>10-30VDC</td>
+
+              <td>DC3 wire</td>
+
+              <td>φ6.5×1×18</td>
+
+              <td>connector</td>
+
+            </tr>
+
+            
+            <tr style="cursor: pointer;" onclick="window.location='http://www.defurotech.com/index.php?id=1302';">
+
+              <td style="width:10%;"><img src="http://www.defurotech.com/data/upload/image/20190131/1548897010317790.png"></td>
+
+              <td>φ6.5</td>
+
+              <td>flush</td>
+
+              <td>1mm</td>
+
+              <td>stainless steel</td>
+
+              <td>10-30VDC</td>
+
+              <td>DC3 wire</td>
+
+              <td>φ6.5×1×18</td>
+
+              <td>connector</td>
+
+            </tr>
+
+            
+            <tr style="cursor: pointer;" onclick="window.location='http://www.defurotech.com/index.php?id=1301';">
+
+              <td style="width:10%;"><img src="http://www.defurotech.com/data/upload/image/20190111/1547170086260467.jpg"></td>
+
+              <td>φ6.5</td>
+
+              <td>flush</td>
+
+              <td>1mm</td>
+
+              <td>stainless steel</td>
+
+              <td>10-30VDC</td>
+
+              <td>DC3 wire</td>
+
+              <td>φ6.5×1×18</td>
+
+              <td>straight line</td>
+
+            </tr>
+
+            
+          </tbody></table>
+</div>
+
+<script>
+
+
+</script>
+</body>
+
+</html>

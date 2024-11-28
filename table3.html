@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+html {
+    font-size: 10px
+}
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px
+}
+
+.c-frame__main-container {
+    max-width: 82rem;
+    min-width: 36rem;
+    margin: 0 auto
+}
+.c-frame__header-logo-container {
+    justify-content: center;
+    display: flex
+}
+.c-frame__header-logo {
+    width: 20rem;
+    height: 12rem;
+    fill: #183884;
+    background-color: #fff;
+    border-radius: .3rem;
+    padding: .8rem 3rem
+}
+
+.c-frame__content-container {
+    padding: 0 2rem
+}
+
+.c-frame__title-container {
+    grid-template-columns: 2fr 1fr;
+    display: grid
+}
+
+.c-frame__title {
+    color: #cd0044;
+    font-size: 2rem;
+    font-weight: 700
+}
+
+.c-frame__company-logo {
+    max-width: 20rem;
+    justify-self: end
+}
+
+.c-frame-content__images {
+    text-align: center
+}
+
+.c-images-product {
+    max-width: 45rem;
+    max-height: 35rem
+}
+
+.c-frame-content__description {
+    width: 100%
+}
+
+.c-frame__drawings-container {
+    max-width: 100%;
+    overflow: auto
+}
+
+.c-frame__drawing {
+    margin: 2rem 0
+}
+
+.o-table {
+    border-collapse: collapse;
+    border: none
+}
+
+.o-table--fixed-table-layout {
+    table-layout: fixed
+}
+
+.o-table-vertical tbody tr:nth-child(2n) {
+    background-color: #f5f5f5
+}
+
+.o-table-vertical th, .o-table-vertical td {
+    padding: 3px
+}
+
+.o-table-vertical th {
+    color: #fff;
+    background-color: #4b5b69;
+    border-radius: 3px
+}
+
+.o-table__container {
+    max-width: 100%;
+    overflow-x: auto
+}
+
+.o-frame-body--full .o-table__container {
+    overflow: unset
+}
+
+.o-frame-body--full .c-frame__header, .o-frame-body--full .c-frame__footer-container {
+    padding: 0 2rem
+}
+
+.o-table thead tr {
+    color: #fff;
+    text-align: left;
+    background-color: #4b5b69
+}
+
+.o-table thead th, .o-table tbody td {
+    vertical-align: baseline;
+    padding: 5px
+}
+
+.o-table a {
+    color: #183884;
+    cursor: pointer;
+    text-decoration: underline
+}
+
+.o-table .o-frame__symbol--white a {
+    color: #fff
+}
+
+.o-table thead tr th:first-child {
+    border-radius: 3px 0 0 3px
+}
+
+.o-table thead tr th:last-child {
+    border-radius: 0 3px 3px 0
+}
+
+.o-table__multiple-header thead tr:first-child th:first-child {
+    border-radius: 3px 0 0
+}
+
+.o-table__multiple-header thead tr:first-child th:last-child {
+    border-radius: 0 3px 0 0
+}
+
+.o-table__multiple-header thead tr:last-child th:first-child {
+    border-radius: 0 0 0 3px
+}
+
+.o-table__multiple-header thead tr:last-child th:last-child {
+    border-radius: 0 0 3px
+}
+
+.o-table--full {
+    width: 100%
+}
+
+.o-table__col-1-sticky tr td:first-child, .o-table__col-1-sticky tr th:first-child {
+    background-color: inherit;
+    filter: brightness(.98);
+    white-space: nowrap;
+    font-weight: 700;
+    position: -webkit-sticky;
+    position: sticky;
+    left: 0
+}
+
+.o-frame-body--full .o-table__col-1-sticky tr td:first-child, .o-frame-body--full .o-table__col-1-sticky tr th:first-child {
+    position: inherit
+}
+
+.o-table__specification {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    border: 1;
+    font-size: 1.4rem;
+}
+
+.o-table__specification tr:nth-child(2n+1) {
+    background-color: #f5f5f5
+}
+
+.o-table__specification td {
+    vertical-align: baseline;
+    padding: .5rem 1rem
+}
+
+.o-table__specification tbody tr td:nth-child(2) {
+    font-weight: 700
+}
+
+.o-table__striped tbody tr:nth-child(2n+1) {
+    background-color: #f5f5f5
+}
+
+.o-table__striped tbody tr:nth-child(2n) {
+    background-color: #fff
+}
+
+.o-table__annotation {
+    padding: .5rem;
+    font-size: 1.2rem
+}
+
+.c-frame__separate-chapters-container {
+    flex-direction: column;
+    row-gap: 1rem;
+    display: flex
+}
+
+.c-frame__separate-chapters-item {
+    column-gap: 2rem;
+    display: flex
+}
+
+.c-frame__separate-chapters-key {
+    flex: 0 0 20rem;
+    font-weight: 700
+}
+
+@media (max-width: 768px) {
+    .c-frame__separate-chapters-key {
+        flex: 0 0 10rem
+    }
+}
+
+.c-frame__footer-content {
+    color: #fff;
+    background-color: #2e353b;
+    border-radius: .5rem;
+    display: grid
+}
+.c-frame__footer-social-icons-container {
+    justify-content: center;
+    display: flex;
+    position: relative;
+    bottom: 3rem
+}
+.c-frame__footer-social-icons {
+    background-color: #fff;
+    border: .1rem solid #ddd;
+    border-radius: .3rem;
+    justify-content: center;
+    padding: .2rem 2.5rem;
+    list-style: none;
+    display: flex
+}
+
+.c-frame__footer-social-icons-items {
+    align-items: center;
+    padding: 1.5rem 1rem;
+    display: flex
+}
+
+.c-frame__footer-social-icons-text {
+    text-transform: uppercase;
+    color: #90969b;
+    padding-right: 2rem;
+    font-size: 1.2rem;
+    font-weight: 700
+}
+
+.c-frame__footer-social-icons-icon {
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer
+}
+
+.c-frame__footer-parcat-container {
+    padding: 0 2rem
+}
+
+
+    </style>
+</head>
+<body></body>
+    <div class="c-frame__main-container">
+
+        <!-- Header -->
+        <div class="c-frame__header">
+            <div class="c-frame__header-logo-container">
+                <a href="https://www.tme.eu/en/" class="c-frame__header-logo" title="Transfer Multisort Elektronik">
+                    <img src="/assets/pictures/logo.png" alt="logo icon">
+                </a>
+            </div>
+            <div class="c-frame__header-line--blue"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="c-frame__content-container">
+
+<!-- Autogenerated Content -->
+
+<div class="c-frame__title-container">
+ <h1 class="c-frame__title">Photoelectric sensors, PS series</h1>
+ <img class="c-frame__company-logo" src="/html/gfx/logo_198.jpg" alt="logo">
+</div>
+<div class="c-frame-content__images u-frame__my-2">
+ <img class="c-images-product" src="/assets/pictures/hs-c12-n01-product.png" alt="Photoelectric sensors, PS series, PS-2000T-NH, PS-2000T-PH, PS-300M-NH, PS-300M-PH, PS-40D-NH |EN|">
+</div>
+
+<!-- FrameTableType: CommonValuesParamSepLines -->
+<div class="u-frame__my-2">
+ <table class="o-table__specification">
+  <tbody><tr><td>Type of sensor</td><td>inductive proximity sensor</td></tr>
+    <tr>
+        <td>Model</td>
+        <td>⌀3</td>
+    </tr>
+    <tr>
+        <td>Installation</td>
+        <td>Shielded</td>
+    </tr>
+    <tr>
+        <td>Sensing Distance</td>
+        <td>0.6mm</td>
+    </tr>
+    <tr>
+        <td>Housing Material</td>
+        <td>Stainless Steel</td>
+    </tr>
+    <tr><td>Indicator</td><td>LED</td></tr>
+  <tr><td>Supply voltage</td><td>10...30V DC</td></tr>
+  <tr><td>Ripple Voltage</td><td>10%</td></tr>
+  <tr><td>No Load Current</td><td>10mA</td></tr>
+
+  <tr><td>Max. operating current</td><td><span class="number-value">100mA</span></td></tr>
+  <tr><td>Connection</td><td>lead 2m</td></tr>
+  <tr><td>Operating temperature</td><td>-25...70°C</td></tr>
+  <tr><td>IP rating</td><td>IP67</td></tr>
+  <tr><td>Operation modes</td><td>DARK-ON, LIGHT-ON</td></tr>
+
+
+  <tr><td>Operation modes</td><td>DARK-ON, LIGHT-ON</td></tr>
+
+  <tr><td>Output configuration</td><td><a class="o-frame__link js-frame__image" href="/html/gfx/image_20828.gif" data-title="Fig. 1." title="Fig. 1.">Fig. 1.</a></td></tr>
+ </tbody>
+</table>
+</div>
+
+<div class="o-table__container u-frame__my-2">
+ <table class="o-table o-table__col-1-sticky o-table__striped o-table--full o-table__multiple-header">
+  <thead>
+   <tr>
+    <th>Symbol</th>
+    <th>Oper. mode</th>
+    <th>Output conf.</th>
+    <th>Range</th>
+    <th>f<sub>switch.</sub> max</th>
+   </tr>
+   <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th>[m]</th>
+    <th>[Hz]</th>
+   </tr>
+  </thead>
+  <tbody>
+   <tr>
+    <td class="o-frame__symbol js-frame__symbol symbol"><a href="/sg/en/details/ps-300m-nh/standard-photoelectric-sensors/anly-electronics/" title="PS-300M-NH" data-gtm-trap="" data-gtm-event="GAevent2" data-gtm-event-label="click" data-gtm-event-category="product_listing" data-gtm-event-action="tme_symbol" data-gtm-event-non-integration="False" data-gtm-prod-id="PS-300M-NH" data-set-cookie="true">PS-300M-NH</a></td>
+    <td>retro-reflective</td>
+    <td>NPN</td>
+    <td><span class="number-value">3</span></td>
+    <td><span class="number-value">60</span></td>
+   </tr>
+   <tr>
+    <td class="o-frame__symbol js-frame__symbol symbol"><a href="/sg/en/details/ps-300m-ph/standard-photoelectric-sensors/anly-electronics/" title="PS-300M-PH" data-gtm-trap="" data-gtm-event="GAevent2" data-gtm-event-label="click" data-gtm-event-category="product_listing" data-gtm-event-action="tme_symbol" data-gtm-event-non-integration="False" data-gtm-prod-id="PS-300M-PH" data-set-cookie="true">PS-300M-PH</a></td>
+    <td>retro-reflective</td>
+    <td>PNP</td>
+    <td><span class="number-value">3</span></td>
+    <td><span class="number-value">60</span></td>
+   </tr>
+   <tr>
+    <td class="o-frame__symbol js-frame__symbol symbol"><a href="/sg/en/details/ps-40d-nh/standard-photoelectric-sensors/anly-electronics/" title="PS-40D-NH" data-gtm-trap="" data-gtm-event="GAevent2" data-gtm-event-label="click" data-gtm-event-category="product_listing" data-gtm-event-action="tme_symbol" data-gtm-event-non-integration="False" data-gtm-prod-id="PS-40D-NH" data-set-cookie="true">PS-40D-NH</a></td>
+    <td>diffuse-reflective</td>
+    <td>NPN</td>
+    <td><span class="number-value">0.4</span></td>
+    <td><span class="number-value">80</span></td>
+   </tr>
+  </tbody>
+ </table>
+</div>
+
+<!-- FrameTableType: TableNormal -->
+<div class="o-table__container u-frame__my-2">
+ <table class="o-table o-table__col-1-sticky o-table__striped o-table--full">
+  <thead>
+   <tr>
+    <th>Symbol</th>
+    <th>Features</th>
+   </tr>
+  </thead>
+  <tbody>
+   <tr>
+    <td class="o-frame__symbol js-frame__symbol symbol"><a href="/sg/en/details/ps-300m-nh/standard-photoelectric-sensors/anly-electronics/" title="PS-300M-NH" data-gtm-trap="" data-gtm-event="GAevent2" data-gtm-event-label="click" data-gtm-event-category="product_listing" data-gtm-event-action="tme_symbol" data-gtm-event-non-integration="False" data-gtm-prod-id="PS-300M-NH" data-set-cookie="true">PS-300M-NH</a></td>
+    <td>Reflector is provided with sensor.</td>
+   </tr>
+   <tr>
+    <td class="o-frame__symbol js-frame__symbol symbol"><a href="/sg/en/details/ps-300m-ph/standard-photoelectric-sensors/anly-electronics/" title="PS-300M-PH" data-gtm-trap="" data-gtm-event="GAevent2" data-gtm-event-label="click" data-gtm-event-category="product_listing" data-gtm-event-action="tme_symbol" data-gtm-event-non-integration="False" data-gtm-prod-id="PS-300M-PH" data-set-cookie="true">PS-300M-PH</a></td>
+    <td>Reflector is provided with sensor.</td>
+   </tr>
+  </tbody>
+ </table>
+</div>
+
+    <!-- Autogenerated END -->
+
+        </div>
+
+        <!-- Footer -->
+        <div class="c-frame__footer-container u-frame__my-2">
+            <div class="c-frame__footer-content">
+                <a href="https://www.tme.eu/en/" class="c-frame__footer-logo-container">
+                    <img class="c-frame__footer-logo-svg" src="/html/EN/svg/footer_logo.svg" alt="logo icon">
+                </a>
+
+                <div class="c-frame__footer-information-container">
+                    <p class="c-frame__footer-about-title">Transfer Multisort Elektronik Sp. z o.o.</p>
+
+                    <div class="c-frame__footer-about-container">
+                        <p class="c-frame__footer-about-text">
+                            ul. Ustronna 41, 93-350 Łódź, Poland<br>
+							NIP: 729-010-89-84, VAT UE: PL7290108984<br>
+                            District Court for Łódź-Śródmieście in Łódź<br>
+                            KRS:0000165815<br>
+                            Amount of share capital: 3 300 000 PLN<br>
+                        </p>
+                    </div>
+                    <div class="c-frame__footer-contact-container">
+                        <p class="c-frame__footer-contact-text">
+                            Contact us:<br>
+                            Tel.: +48 42 645 54 44<br>
+                            Fax.: +48 42 645 54 70<br>
+                            E-mail: <a href="mailto:export@tme.eu" class="c-frame-footer__link" title="mail TME">export@tme.eu</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="c-frame__footer-social-icons-container">
+                <ul class="c-frame__footer-social-icons">
+                    <li class="c-frame__footer-social-icons-items">
+                        <p class="c-frame__footer-social-icons-text">JOIN US:</p>
+                    </li>
+                    <li class="c-frame__footer-social-icons-items">
+                        <a href="https://www.facebook.com/TME.eu/" target="_blank" rel="noopener" aria-label="facebook">
+                            <img class="c-frame__footer-social-icons-icon" src="/html/EN/svg/facebook.svg" alt="facebook icon">
+                        </a>
+                    </li>
+                    <li class="c-frame__footer-social-icons-items">
+                        <a href="https://www.youtube.com/user/TMElectroniComponent" target="_blank" rel="noopener" aria-label="youtube">
+                            <img class="c-frame__footer-social-icons-icon" src="/html/EN/svg/youtube.svg" alt="youtube icon">
+                        </a>
+                    </li>
+                    <li class="c-frame__footer-social-icons-items">
+                        <a href="https://twitter.com/tme_eu" target="_blank" rel="noopener" aria-label="twitter">
+                            <img class="c-frame__footer-social-icons-icon" src="/html/EN/svg/twitter.svg" alt="twitter icon">
+                        </a>
+                    </li>
+                    <li class="c-frame__footer-social-icons-items">
+                        <a href="https://www.instagram.com/tme.eu/" target="_blank" rel="noopener" aria-label="instagram">
+                            <img class="c-frame__footer-social-icons-icon" src="/html/EN/svg/instagram.svg" alt="instagram icon">
+                        </a>
+                    </li>
+                    <li class="c-frame__footer-social-icons-items">
+                        <a href="https://www.linkedin.com/company/1350565/" target="_blank" rel="noopener" aria-label="linkedin">
+                            <img class="c-frame__footer-social-icons-icon" src="/html/EN/svg/linkedin.svg" alt="linkedin icon">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="c-frame__footer-parcat-container">
+                Product Information Management: www.parcat.eu
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

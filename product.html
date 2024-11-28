@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Systematic price from Defuro</title>
+    <script src="https://unpkg.com/vue@2"></script>
+    <style>
+   
+        .line-red {
+            background-color: #66cc66;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-width: 400px;
+            max-width: 800px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 10px 0;
+            text-align: center;
+            background-color: white;
+            width: 800px;
+            min-width: 500px;
+        }
+
+        .logoleft {
+            padding: 10px 35px;
+            color: #66cc66;
+        }
+
+        .searchright {
+            padding-right: 18px;
+        }
+
+        .inputleft {
+            margin-left: 15px;
+            border: 1px solid #009879;
+            border-radius: 12px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            padding: 8px;
+        }
+
+        .inputleft:focus {
+            outline: none;
+            border-color: #4A90E2;
+            box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+            animation: blink 0.8s infinite;
+        }
+    
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        } 
+
+        table {
+            margin-top: 115px;
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9em;
+            min-width: 400px;
+            max-width: 800px;
+            background: #f3f3f3;
+            border-radius: 5px 5px 0 0;
+            overflow: hidden;
+        }
+
+        th,
+        td {
+            padding: 12px 15px;
+            text-align: center;
+            border-bottom: 1px solid #dddddd;
+        }
+
+        th {
+            background-color: #009879;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+
+        td {
+            background-color: #f3f3f3;
+        }
+
+        th:first-child,
+        td:first-child {
+            text-align: left;
+            /* 首列左对齐 */
+        }
+
+        /* td:last-child,
+        th:last-child {
+            text-align: right;
+        } */
+    </style>
+
+</head>
+
+<body>
+    <div id="app">
+        <div class="header-container">
+
+            <h2 class="logoleft">Defuro</h2>
+
+            <span class="searchright">search
+                <Input v-model="search" class="inputleft"></Input>
+            </span>
+
+        </div>
+        <table>
+            <th>Model</th>
+            <th>Size </th>
+            <th>Newest</th>
+            <th>Voltage</th>
+            <th>DistributorPrice</th>
+
+
+            <tr v-if="filteredSystemPrice.length" v-for="(sprice, spid) in filteredSystemPrice" :key="spid">
+                <td>{{ sprice.Model }}</td>
+                <td>{{ sprice.Dimension }}</td>
+                <td>{{ sprice.NewestPrice }}</td>
+                <td>{{ sprice.Voltage }}</td>
+                <td>{{ sprice.NewestPrice* 0.35*0.92/7 | formatPrice }}</td>
+            </tr>
+        </table>
+    </div>
+    <script type="module">
+        // import SysPrice  from "./api/test.js"
+        import SysPrice from "./api/data.js";
+
+        var app = new Vue({
+            el: '#app',
+            data() {
+                return {
+                    sysPrice: '',
+                    test: 'hello world',
+                    search: '',
+                }
+            },
+            computed: {
+                filteredSystemPrice() {
+                    return this.sysPrice.filter((item) => {
+                        if (item.Model.toLowerCase().indexOf(this.search.replace(/\s+/g, '').toLowerCase()) != -1) {
+                            return item;
+                        }
+                        if (this.search == '') {
+                            return item;
+                        }
+                    })
+                },
+            },
+            beforeMount() {
+                console.log('logged');
+                this.sysPrice = SysPrice;
+                console.log('succcess loading data');
+                console.log(this.sysPrice);
+            },
+            methods: {
+            },
+            filters: {
+                formatPrice(value) {
+                    if (!value) return 'N/V';
+
+                    return 'USD' + parseFloat(value).toFixed(2);
+
+                    // return new Intl.NumberFormat('en-US', {
+                    //         style: 'currency',
+                    //         currency: USD,
+                    //     }).format(value);
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
