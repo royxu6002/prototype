@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Profile</title>
+    <style>
+        /* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    background-color: #f0f2f5;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+
+.menu {
+    height: 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: white;
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.menu a{
+    margin-right:20px;
+}
+
+.submenu{
+    position: fixed;
+    top: 100px;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.content{
+    height: calc(100% - 50px);
+    overflow: auto;
+    width: 80%;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+.profile-header {
+    background-color: #4267B2;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.nav-bar {
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-bar li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: #4267B2;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+h2 {
+    color: #333;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <div>
+            <a href="">clientsApp</a><input type="text">
+        </div>
+        <div>
+            <a href="">Home</a><a href="">Contacts</a><a href="">Products</a><a href="">Interactions</a><a href="">Blog</a>
+        </div>
+       <div class="flex-item">Sign in</div>
+    </div>
+
+    <div class="submenu">
+        <span>James Profile</span>
+        <span>Orders</span>
+        <span>Orders</span>
+        <span>About</span>
+
+    </div>
+
+    <div class="content">
+        <header>
+            <div class="profile-header">
+                <div>
+                    <img src="profile-pic.jpg" alt="Profile Picture" class="profile-pic">
+                </div>
+                <div>
+                    <h1 class="profile-name">John Doe</h1>
+                    <p class="profile-bio">Web Developer | Tech Enthusiast | Lifelong Learner</p>
+                </div>
+            </div>
+        </header>
+       
+
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="#leads">Leads</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#friends">Contact</a></li>
+                <li><a href="#posts">Quotation</a></li>
+                <li><a href="#posts">Order</a></li>
+                <li><a href="#posts">Aftersale</a></li>
+            </ul>
+            <a href="">Email</a>
+        </nav>
+        <main>
+            <div class="main-left">
+                <section id="about">
+                    <h2>About</h2>
+                    <p>Information about John Doe.</p>
+                </section>
+            </div>  
+            <div class="main-right">
+                <section id="friends">
+                    <h2>Friends</h2>
+                    <p>List of friends.</p>
+                </section>
+            </div>
+        </main>
+    </div>   
+       
+    <footer>
+        <p>&copy; 2023 John Doe. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

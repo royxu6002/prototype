@@ -7,6 +7,11 @@
     <title>Systematic price from Defuro</title>
     <script src="https://unpkg.com/vue@2"></script>
     <style>
+
+        body, div, table{
+            margin: 0;
+            padding: 0;
+        }
    
         .line-red {
             background-color: #66cc66;
@@ -112,28 +117,19 @@
 
 <body>
     <div id="app">
-        
-      
         <div class="header-container">
-            
-                <h2 class="logoleft">Defuro</h2>
-
-
-                <span class="searchright">search
-                    <Input v-model="search" class="inputleft"></Input>
-                </span>
-            
-           
-
+            <h2 class="logoleft">Defuro</h2>
+            <span class="searchright">search
+                <Input v-model="search" class="inputleft"></Input>
+            </span>
         </div>
+
         <table>
             <th>Model</th>
             <th>Size </th>
             <th>Newest</th>
             <th>Voltage</th>
             <th>DistributorPrice</th>
-
-
             <tr v-if="filteredSystemPrice.length" v-for="(sprice, spid) in filteredSystemPrice" :key="spid">
                 <td>{{ sprice.Model }}</td>
                 <td>{{ sprice.Dimension }}</td>
