@@ -1,3 +1,3 @@
 export default {
-    usdcny: 7.0
+    USDCNY: 7.2
 }
