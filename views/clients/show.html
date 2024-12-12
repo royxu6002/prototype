@@ -5,13 +5,449 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    html {
+        font-family: Delivery,Verdana,sans-serif;
+        font-size: .625rem
+    }
+    body{
+        font-size: 1.6rem;
+    }
+    .container{
+        height: 100%;
+        margin: 0 auto;
+        max-width: 136rem;
+        min-width: 32rem;
+    }
+    .content-container{
+        text-align: center;
+    }
+    .content-header{
+        padding: 2.5rem;
+    }
+    .client-input-header{
+        padding: 2rem;
+    }
+    .client-input-header input{
+        width:320px;
+        height: 50px;
+        box-sizing:border-box;
+        border:1px solid #ccc;
+        padding:5px;
+        border-radius:3px;
+        font-family:"Helvetica Neue";
+    }
+   .client-input-header input[type="text"] {
+        font-size: 2rem; /* 文本输入字体大小设置为16像素 */
+    }
+
+    .client-container {
+        background-color: #f2f2f2;
+
+    }
+
+    .client-detail-wrapper{
+        margin-top: 1.5rem;
+        border: .05rem solid navy;
+        border-radius: .4rem;
+        margin-bottom: 2.8rem;
+        max-width: 92rem;
+        width: 100%;
+        margin: 0 auto;
+        background-color: white;
+        text-align: left;
+    }
+    
+    .client-detail-section {
+        width: 100%;
+        max-width: 88rem;
+        margin: 0 auto;
+        padding: 2.8rem;
+        border-bottom: .03rem solid #eee;
+    }
+    .client-detail-section:last-child{
+        border-bottom: none;
+    }
+   
+    
+</style>
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script>
 
 </script>
 <body>
     <div id="app">
-        {{message}}
+      <div class="container">
+
+        <header class="menu-container">
+
+        </header>
+        <main class="content-container">
+            <div class="content-header">
+                {{message}}
+            </div>
+        
+            <!-- design refer to: https://www.dhl.com/cn-en/home/tracking/tracking-express.html?submit=1&tracking-id=3155282734 -->
+            <div class="content-main client-container">
+                <div class="client-input-header">
+                    <input type="text">
+                </div>
+                <div class="client-detail-container">
+                    <div class="client-detail-wrapper">
+        
+                        <div class="c-tracking-result--status-code-200 c-tracking-result--status-shipment-intransit">
+                            <div class="c-tracking-result--header">
+                                <!-- message only -->
+                
+                                <!-- detail view -->
+                
+                                    <div class="client-detail-section has-rte">
+                                            <h2 class="sr-only">Tracking Results</h2>
+                                                <div data-exclude-simplify="true" class="c-tracking-result--code" aria-hidden="true">Tracking Code: 3155282734</div>
+                                                <span class="is-hidden">Tracking Code: 3 1 5 5 2 8 2 7 3 4</span>
+                                                <span class="is-hidden" aria-hidden="true">3155282734</span>
+                
+                                                <div data-exclude-simplify="true">This shipment is handled by: <strong data-exclude-simplify="true">DHL Express</strong></div>
+                
+                                                <a data-exclude-simplify="true" href="/cn-en/home/tracking/contact/express.html" target="_blank" rel="noopener noreferrer" class="c-tracking-result--contact-link c-tracking-result--info-link link link-external has-icon js-tracking-result--info-link" style="display: none !important;">Customer Service</a>
+                
+                                            <button>
+                                                <span>Print</span>
+                                            </button>
+                                    </div>
+                
+                                    <div class="client-detail-section">
+                                            <div class="c-tracking-result--status">
+                                                    <h2 data-exclude-simplify="true" role="text" tabindex="-1" class="c-tracking-result--status-copy-message level4" dir="ltr">Shipment has departed from a DHL facility EAST CHINA AREA - CHINA, PEOPLES REPUBLIC<span class="is-hidden">, Tracking Code: 3 1 5 5 2 8 2 7 3 4</span></h2>
+                                                    <div class="c-tracking-result--status-copy-date">
+                                                        <span data-exclude-simplify="true">Thursday, December 12, 2024 at 2:14 AM (UTC +08:00)</span><span>, 
+                                                                EAST CHINA AREA - CHINA, PEOPLES REPUBLIC
+                </span>
+                                                    </div>
+                                            </div>
+                                            <p data-exclude-simplify="true" class="c-tracking-result--origin js-tracking-result--origin bold">
+                                                Origin
+                                                            Service Area
+                                                        :
+                                                        ZHEJIANG PROVINCE - CHINA, PEOPLES REPUBLIC
+                                            </p>
+                                            <div class="c-tracking-results--status-bar-container l-grid ">
+                                                <div class="c-tracking-results-status-bar l-grid--w-33pc-s bar-1 bar-transit-plane bar-intransit">
+                                                </div>
+                                                <div class="c-tracking-results-status-bar l-grid--w-33pc-s bar-2 bar-transit-plane bar-intransit ">
+                                                </div>
+                                                <div class="c-tracking-results-status-bar l-grid--w-33pc-s bar-3 bar-transit-plane bar-intransit ">
+                                                </div>
+                                                <div class="c-tracking-result--status-icon transit-plane bar-intransit">
+                                                    <span class="c-tracking-result--icon has-icon c-tracking-result--status-shipment-transit-plane bar-intransit">
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <p data-exclude-simplify="true" class="c-tracking-result--destination js-tracking-result--destination bold">
+                                                Destination
+                                                            Service Area
+                                                        :
+                                                        BANGALORE - INDIA
+                                            </p>
+                                                    <button class="base-button base-button--white c-tracking-result--sensitive-data-authenticate js-tracking-result--sensitive-data-authenticate" data-codes="shipper-city,consignee-city"><span>Authenticate Yourself to View More Details</span></button>
+                                    </div>
+                
+                                    <div class="client-detail-section">
+                                            <div class="c-tracking-result--delivery">
+                                                <div>Estimated Time of Arrival</div>
+                                                <span data-exclude-simplify="true" class="c-tracking-result--delivery-headline level3">December 17, 2024 - By End of Day</span>
+                                            </div>
+        
+                                            <div class="c-tracking--result--description-more has-rte">
+                                                    <div><strong>Further Detail</strong></div>
+                                                    <div data-exclude-simplify="true" class="c-tracking--result--description-more-content">The shipment is on its way to the destination.</div>
+                                            </div>
+                                            <div class="c-tracking--result--description-more has-rte">
+                                                    <div><strong>Next Step</strong></div>
+                                                    <div data-exclude-simplify="true" class="c-tracking--result--description-more-content">Please continue to monitor the progress online. If you are the consignee and would like to change your delivery preference, please visit https://delivery.dhl.com.</div>
+                                            </div>
+                                    </div>
+                
+                                    <div class="client-detail-section">
+                                        <div>
+                                            <div data-exclude-simplify="true" class="c-tracking--result--description-more-content">To protect your privacy, more delivery details are available after validation</div>
+                                        </div>
+    
+                                        <a data-exclude-simplify="true" href="https://proview.dhl.com/proview/adhocnotify?id=v0QyQcQ6apeXpPaPBcomApFIIeeuSJqyq5s8AKmHCQk%3D&amp;appuid=aVUIG58TfvHFXcIxYfZMgQ%3D%3D&amp;locale=en_CN&amp;token=xOW%2B1WUlaXz1DDmfbPAuJbA0V4qA124LF2O22zX5298%3D" class="base-button c-tracking-result--notification icon-push-android" target="_blank">Shipment notifications
+                                        </a>
+                                    </div>
+                
+                                    <div class="client-detail-section">
+                                        <div class="c-tracking-result--moredetails-dropdown js--accordion--type-default c-accordion--item js--accordion--item l-grid--left-s is-open is-latest">
+                                            <div class="c-accordion--hitbox c-component-accordion--header js--accordion--header js--dropdown-moredetails-open">
+                                                <button id="c-tracking-result--moredetails-dropdown-button" class="c-tracking-result--moredetails-dropdown-button js--dropdown-moredetails-toggle-btn has-icon" aria-expanded="true" aria-controls="c-tracking-result--moredetails-dropdown-menu">
+                                                    <h3 class="c-tracking-result--detail-label level4">More Shipment Details</h3>
+                                                </button>
+                                            </div>
+                                            <div class="c-tracking-result--moredetails-dropdown-menu c-accordion--content js--accordion--content" id="c-tracking-result--moredetails-dropdown-menu" aria-labelledby="c-tracking-result--moredetails-dropdown-button" style="display: block; overflow: hidden;">
+                                                <table aria-labelledby="c-tracking-result--moredetails-dropdown-button" class="c-tracking-result--moredetails-group">
+                                                    <tbody class="l-grid">
+                                                        <tr class="c-tracking-result--moredetails-content l-grid l-grid--w-100pc-s ">
+                                                            <th data-exclude-simplify="true" scope="row" class="c-tracking-result--moredetails-title l-grid--w-40pc-m l-grid--w-100pc-s">
+                                                                Service
+                                                            </th>
+                                                            <td class="has-rte l-grid--w-100pc-s l-grid--w-60pc-m">
+                                                                <div data-exclude-simplify="true" dir="ltr">
+                                                                    EXPRESS WORLDWIDE
+                                                                </div>
+                                                                                                            </td>
+                                                        </tr>
+                                                        <tr class="c-tracking-result--moredetails-content l-grid l-grid--w-100pc-s ">
+                                                            <th data-exclude-simplify="true" scope="row" class="c-tracking-result--moredetails-title l-grid--w-40pc-m l-grid--w-100pc-s">
+                                                                1 Piece ID
+                                                            </th>
+                                                            <td class="has-rte l-grid--w-100pc-s l-grid--w-60pc-m">
+                                                                <div dir="ltr">
+                                                                        <button data-exclude-simplify="true" type="button" aria-label=" J D 0 1 4 6 0 0 0 1 1 8 3 7 2 2 9 6 5 4" class="js--tracking-result--pieceid link link-red" data-type="PieceId">JD014600011837229654</button>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="c-tracking-result--moredetails-content l-grid l-grid--w-100pc-s ">
+                                                            <th data-exclude-simplify="true" scope="row" class="c-tracking-result--moredetails-title l-grid--w-40pc-m l-grid--w-100pc-s">
+                                                                Waybill Number
+                                                            </th>
+                                                            <td class="has-rte l-grid--w-100pc-s l-grid--w-60pc-m">
+                                                                <div dir="ltr">
+                                                                        <button data-exclude-simplify="true" type="button" aria-label=" 3 1 5 5 2 8 2 7 3 4" class="js--tracking-result--pieceid link link-red" data-type="Waybill">3155282734</button>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+            
+            
+            
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="client-detail-section">
+                                        <div class="c-tracking-result--checkpoints-dropdown js--accordion--type-default c-accordion--item js--accordion--item l-grid--left-s">
+                                            <div class=" c-accordion--hitbox js--accordion--hitbox c-component-accordion--header js--accordion--header js--dropdown-checkpoints-open">
+                                                <button id="c-tracking-result--checkpoints-dropdown-button" class="c-tracking-result--moredetails-dropdown-button js--dropdown-moredetails-toggle-btn js-tracking-result--checkpoints--toggle-btn has-icon" aria-expanded="false" aria-controls="c-tracking-result--checkpoints-dropdown-menu">
+                                                    <h3 class="c-tracking-result--detail-label level4">All Shipment Updates</h3>
+                                                </button>
+                                            </div>
+                                            
+                                            <div class="c-accordion--content js--accordion--content" id="c-tracking-result--checkpoints-dropdown-menu" aria-labelledby="c-tracking-result--checkpoints-dropdown-button" style="display: none;">
+                                                    <div class="c-tracking-result--checkpoint l-grid--left-s">
+                                                        <div class="c-tracking-result--checkpoint-info">
+                                                            <ul>
+                                                                <li class="l-grid">
+                                                                    <div class="c-tracking-result--checkpoint-left  first">
+                                                                        <span data-exclude-simplify="true" class="c-tracking-result--checkpoint-weekday  ">Thursday</span>
+                                                                        <span data-exclude-simplify="true" class="c-tracking-result--checkpoint-date level4">December 12, 2024</span>
+            
+                                                                        <span data-exclude-simplify="true" class="c-tracking-result--checkpoint-time">
+                                                                        2:14 AM (UTC +08:00)
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="c-tracking-result--checkpoint-right has-icon">
+                                                                        <div class="c-tracking-result--checkpoint-mobile">
+                                                                                <span data-exclude-simplify="true" class="c-tracking-result--checkpoint-weekday">Thursday</span>
+                                                                                <span data-exclude-simplify="true" class="c-tracking-result--checkpoint-date level4">December 12, 2024</span>
+            
+                                                                                <span data-exclude-simplify="true" class="c-tracking-result--checkpoint-time">
+                                                                                    2:14 AM (UTC +08:00)
+                                                                                </span>
+                                                                        </div>
+                                                                        <p data-exclude-simplify="true" class="bold  first" dir="ltr">Shipment has departed from a DHL facility EAST CHINA AREA - CHINA, PEOPLES REPUBLIC</p>
+                                                                        <span data-exclude-simplify="true" class="c-tracking-result--checkpoint--more">
+                                                                                EAST CHINA AREA - CHINA, PEOPLES REPUBLIC
+                                                                        </span>
+                                                                            <div class="l-grid">
+                                                                                <span class="c-tracking-result-pieceid--header c-tracking-result-pieceid--header-text">1 Piece ID: </span>
+                                                                                <span class="c-tracking-result-pieceid--content is-open has-rte">
+                                                                                        <button data-exclude-simplify="true" type="button" aria-label="1 Piece ID J D 0 1 4 6 0 0 0 1 1 8 3 7 2 2 9 6 5 4" class="js--tracking-result--pieceid link link-red" data-type="PieceId">JD014600011837229654</button>
+                                                                                </span>
+                                                                            </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-tracking-result--checkpoint l-grid--left-s">
+                                                        <div class="c-tracking-result--checkpoint-info">
+                                                            <ul>
+                                                                <li class="l-grid">
+                                                                    <div class="c-tracking-result--checkpoint-left  first">
+                                                                        <span data-exclude-simplify="true" class="c-tracking-result--checkpoint-weekday  ">Thursday</span>
+                                                                        <span data-exclude-simplify="true" class="c-tracking-result--checkpoint-date level4">December 12, 2024</span>
+            
+                                                                        <span data-exclude-simplify="true" class="c-tracking-result--checkpoint-time">
+                                                                        1:53 AM (UTC +08:00)
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="c-tracking-result--checkpoint-right has-icon">
+                                                                        <div class="c-tracking-result--checkpoint-mobile">
+                                                                                <span data-exclude-simplify="true" class="c-tracking-result--checkpoint-weekday">Thursday</span>
+                                                                                <span data-exclude-simplify="true" class="c-tracking-result--checkpoint-date level4">December 12, 2024</span>
+            
+                                                                                <span data-exclude-simplify="true" class="c-tracking-result--checkpoint-time">
+                                                                                    1:53 AM (UTC +08:00)
+                                                                                </span>
+                                                                        </div>
+                                                                        <p data-exclude-simplify="true" class="bold  first" dir="ltr">Processed at EAST CHINA AREA - CHINA, PEOPLES REPUBLIC</p>
+                                                                        <span data-exclude-simplify="true" class="c-tracking-result--checkpoint--more">
+                                                                                EAST CHINA AREA - CHINA, PEOPLES REPUBLIC
+                                                                        </span>
+                                                                            <div class="l-grid">
+                                                                                <span class="c-tracking-result-pieceid--header c-tracking-result-pieceid--header-text">1 Piece ID: </span>
+                                                                                <span class="c-tracking-result-pieceid--content is-open has-rte">
+                                                                                        <button data-exclude-simplify="true" type="button" aria-label="1 Piece ID J D 0 1 4 6 0 0 0 1 1 8 3 7 2 2 9 6 5 4" class="js--tracking-result--pieceid link link-red" data-type="PieceId">JD014600011837229654</button>
+                                                                                </span>
+                                                                            </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-tracking-result--checkpoint l-grid--left-s">
+                                                        <div class="c-tracking-result--checkpoint-info">
+                                                            <ul>
+                                                                <li class="l-grid">
+                                                                    <div class="c-tracking-result--checkpoint-left  first">
+                                                                        <span data-exclude-simplify="true" class="c-tracking-result--checkpoint-weekday  ">Wednesday</span>
+                                                                        <span data-exclude-simplify="true" class="c-tracking-result--checkpoint-date level4">December 11, 2024</span>
+            
+                                                                        <span data-exclude-simplify="true" class="c-tracking-result--checkpoint-time">
+                                                                        11:20 PM (UTC +08:00)
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="c-tracking-result--checkpoint-right has-icon">
+                                                                        <div class="c-tracking-result--checkpoint-mobile">
+                                                                                <span data-exclude-simplify="true" class="c-tracking-result--checkpoint-weekday">Wednesday</span>
+                                                                                <span data-exclude-simplify="true" class="c-tracking-result--checkpoint-date level4">December 11, 2024</span>
+            
+                                                                                <span data-exclude-simplify="true" class="c-tracking-result--checkpoint-time">
+                                                                                    11:20 PM (UTC +08:00)
+                                                                                </span>
+                                                                        </div>
+                                                                        <p data-exclude-simplify="true" class="bold  first" dir="ltr">Arrived at DHL Sort Facility  EAST CHINA AREA - CHINA, PEOPLES REPUBLIC</p>
+                                                                        <span data-exclude-simplify="true" class="c-tracking-result--checkpoint--more">
+                                                                                EAST CHINA AREA - CHINA, PEOPLES REPUBLIC
+                                                                        </span>
+                                                                            <div class="l-grid">
+                                                                                <span class="c-tracking-result-pieceid--header c-tracking-result-pieceid--header-text">1 Piece ID: </span>
+                                                                                <span class="c-tracking-result-pieceid--content is-open has-rte">
+                                                                                        <button data-exclude-simplify="true" type="button" aria-label="1 Piece ID J D 0 1 4 6 0 0 0 1 1 8 3 7 2 2 9 6 5 4" class="js--tracking-result--pieceid link link-red" data-type="PieceId">JD014600011837229654</button>
+                                                                                </span>
+                                                                            </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="l-grid">
+                                                                    <div class="c-tracking-result--checkpoint-left ">
+                                                                        <span data-exclude-simplify="true" class="c-tracking-result--checkpoint-time">
+                                                                        8:22 PM (UTC +08:00)
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="c-tracking-result--checkpoint-right has-icon">
+                                                                        <div class="c-tracking-result--checkpoint-mobile">
+            
+                                                                                <span data-exclude-simplify="true" class="c-tracking-result--checkpoint-time">
+                                                                                    8:22 PM (UTC +08:00)
+                                                                                </span>
+                                                                        </div>
+                                                                        <p data-exclude-simplify="true" class="bold " dir="ltr">Shipment has departed from a DHL facility ZHEJIANG PROVINCE - CHINA, PEOPLES REPUBLIC</p>
+                                                                        <span data-exclude-simplify="true" class="c-tracking-result--checkpoint--more">
+                                                                                ZHEJIANG PROVINCE - CHINA, PEOPLES REPUBLIC
+                                                                        </span>
+                                                                            <div class="l-grid">
+                                                                                <span class="c-tracking-result-pieceid--header c-tracking-result-pieceid--header-text">1 Piece ID: </span>
+                                                                                <span class="c-tracking-result-pieceid--content is-open has-rte">
+                                                                                        <button data-exclude-simplify="true" type="button" aria-label="1 Piece ID J D 0 1 4 6 0 0 0 1 1 8 3 7 2 2 9 6 5 4" class="js--tracking-result--pieceid link link-red" data-type="PieceId">JD014600011837229654</button>
+                                                                                </span>
+                                                                            </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="l-grid">
+                                                                    <div class="c-tracking-result--checkpoint-left ">
+                                                                        <span data-exclude-simplify="true" class="c-tracking-result--checkpoint-time">
+                                                                        8:09 PM (UTC +08:00)
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="c-tracking-result--checkpoint-right has-icon">
+                                                                        <div class="c-tracking-result--checkpoint-mobile">
+            
+                                                                                <span data-exclude-simplify="true" class="c-tracking-result--checkpoint-time">
+                                                                                    8:09 PM (UTC +08:00)
+                                                                                </span>
+                                                                        </div>
+                                                                        <p data-exclude-simplify="true" class="bold " dir="ltr">Processed at ZHEJIANG PROVINCE - CHINA, PEOPLES REPUBLIC</p>
+                                                                        <span data-exclude-simplify="true" class="c-tracking-result--checkpoint--more">
+                                                                                ZHEJIANG PROVINCE - CHINA, PEOPLES REPUBLIC
+                                                                        </span>
+                                                                            <div class="l-grid">
+                                                                                <span class="c-tracking-result-pieceid--header c-tracking-result-pieceid--header-text">1 Piece ID: </span>
+                                                                                <span class="c-tracking-result-pieceid--content is-open has-rte">
+                                                                                        <button data-exclude-simplify="true" type="button" aria-label="1 Piece ID J D 0 1 4 6 0 0 0 1 1 8 3 7 2 2 9 6 5 4" class="js--tracking-result--pieceid link link-red" data-type="PieceId">JD014600011837229654</button>
+                                                                                </span>
+                                                                            </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="l-grid">
+                                                                    <div class="c-tracking-result--checkpoint-left ">
+                                                                        <span data-exclude-simplify="true" class="c-tracking-result--checkpoint-time">
+                                                                        5:35 PM (UTC +05:30)
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="c-tracking-result--checkpoint-right has-icon">
+                                                                        <div class="c-tracking-result--checkpoint-mobile">
+            
+                                                                                <span data-exclude-simplify="true" class="c-tracking-result--checkpoint-time">
+                                                                                    5:35 PM (UTC +05:30)
+                                                                                </span>
+                                                                        </div>
+                                                                        <p data-exclude-simplify="true" class="bold " dir="ltr">Customs clearance status updated. Note - The Customs clearance process may start while the shipment is in transit to the destination. </p>
+                                                                        <span data-exclude-simplify="true" class="c-tracking-result--checkpoint--more">
+                                                                                BANGALORE - INDIA
+                                                                        </span>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="l-grid">
+                                                                    <div class="c-tracking-result--checkpoint-left ">
+                                                                        <span data-exclude-simplify="true" class="c-tracking-result--checkpoint-time">
+                                                                        3:07 PM (UTC +08:00)
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="c-tracking-result--checkpoint-right has-icon">
+                                                                        <div class="c-tracking-result--checkpoint-mobile">
+            
+                                                                                <span data-exclude-simplify="true" class="c-tracking-result--checkpoint-time">
+                                                                                    3:07 PM (UTC +08:00)
+                                                                                </span>
+                                                                        </div>
+                                                                        <p data-exclude-simplify="true" class="bold " dir="ltr">Shipment picked up</p>
+                                                                        <span data-exclude-simplify="true" class="c-tracking-result--checkpoint--more">
+                                                                                ZHEJIANG PROVINCE - CHINA, PEOPLES REPUBLIC
+                                                                        </span>
+                                                                            <div class="l-grid">
+                                                                                <span class="c-tracking-result-pieceid--header c-tracking-result-pieceid--header-text">1 Piece ID: </span>
+                                                                                <span class="c-tracking-result-pieceid--content is-open has-rte">
+                                                                                        <button data-exclude-simplify="true" type="button" aria-label="1 Piece ID J D 0 1 4 6 0 0 0 1 1 8 3 7 2 2 9 6 5 4" class="js--tracking-result--pieceid link link-red" data-type="PieceId">JD014600011837229654</button>
+                                                                                </span>
+                                                                            </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+     </div>        
+        
     </div>
 </body>
 <script type="module">
@@ -22,19 +458,17 @@
     createApp({
 
         setup() {
-            const message = ref('hellow world')
-            const clients = reactive([])
+            const message = ref('this is a page examplify of clients show page')
+            const clients = reactive(Clients)
 
-            onBeforeMount(()=>{
-                // clients = reactive(Clients)
-                // console.log(clients)
-                console.log(test)
-            })
+            console.log(clients)
 
             return {
-                message
+                message, clients
             }
-        }
+        }       
+            
     }).mount('#app')
 </script>
 </html>
+            
