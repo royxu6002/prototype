@@ -23,11 +23,43 @@
         text-align: center;
     }
     .content-header{
-        padding: 2.5rem;
+        margin: 2rem;
     }
+ 
     .client-input-header{
         padding: 2rem;
     }
+    .search-input{
+       position: relative;
+       border: 0.1rem solid #8c8c8c;
+       border-radius: 0.4rem;
+       display: flex;
+       max-width: 46rem;
+       margin: 3rem auto;
+
+    }
+    .search-input input{
+        border: none;
+        height: 3.8rem;
+        padding: 1.8rem 1.3rem 0;
+        width: 100%;
+    }
+    .search-input label{
+        position: absolute;
+        padding: 1.7rem 1.4rem;
+        font-size: 1.6rem;
+        transition: top .2s ease-out, padding .2s ease-out, padding-top .2s ease-out, font-size .2s ease-out, line-height .2s ease-out, background-color 1ms .2s;
+
+    }
+ 
+    .search-input:focus-within label{
+        transform: scale(0.7);
+        transform-origin: 0 0;
+    }
+    .search-input label{
+        transition: transform 0.3s
+    }
+
     .client-input-header input{
         width:320px;
         height: 50px;
@@ -43,7 +75,7 @@
 
     .client-container {
         background-color: #f2f2f2;
-
+        padding: 5rem 0;
     }
 
     .client-detail-wrapper{
@@ -62,8 +94,8 @@
         width: 100%;
         max-width: 88rem;
         margin: 0 auto;
-        padding: 2.8rem;
-        border-bottom: .03rem solid #eee;
+        padding: 2rem;
+        border-bottom: .03rem solid #2b2b2b;
     }
     .client-detail-section:last-child{
         border-bottom: none;
@@ -87,9 +119,13 @@
         
             <!-- design refer to: https://www.dhl.com/cn-en/home/tracking/tracking-express.html?submit=1&tracking-id=3155282734 -->
             <div class="content-main client-container">
-                <div class="client-input-header">
-                    <input type="text" v-model.trim="selectC"> 
+                <!-- <div class="client-input-header">
+                    <input placeholder="Enter tracking" type="text" v-model.trim="selectC"> 
                     {{selectC}}
+                </div> -->
+                <div class="search-input" data-form-value-state="set">
+                    <input id="search-input" type="input" name="tracking" v-model.trim="selectC" data-error-message="Please enter your tracking" aria-invalid="false" data-listener-added_f9c73b67="true">
+                    <label class="tracking-input-label" for="search-input">Enter your tracking</label>
                 </div>
                 <div class="client-detail-container">
                     <div class="client-detail-wrapper">
@@ -129,22 +165,18 @@
     const { createApp, ref, reactive, onBeforeMount,computed } = Vue
 
     createApp({
-
         setup() {
-            const message = ref('this is a page examplify of clients show page')
+            const message = ref('this is a page exmplify of clients show page')
             const clients = reactive(Clients)
-            const selectC = ref()
-
-            console.log(clients)
-            console.log(selectC)
+            const selectC = ref('')
 
             const filteredClients = computed(()=>{
                 return clients.filter((client)=>{
-                    if (client.company.toLowerCase().indexOf(selectC.toLowerCase()) != -1) {
-                            return item;
+                    if (JSON.stringify(client).toLowerCase().indexOf(selectC.value.toLowerCase()) != -1) {
+                            return client;
                         }
                         if (selectC == '') {
-                            return item;
+                            return client;
                         }
                 })
             })
