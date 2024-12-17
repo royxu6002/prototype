@@ -129,10 +129,13 @@
                 </div>
                 <div class="client-detail-container">
                     <div class="client-detail-wrapper">
+                         <!-- number, rank, source, company, company_type, country, address, telephone, mobile, contact_person, position, email, website, liaison -->
                         <div class="client-detail-section" v-for="(cli,ind) in filteredClients" :id="ind">
                             <div v-if="cli.company">
                                 <div>Company</div>
-                                <span data-exclude-simplify="true" class="">{{ cli.company }}</span>
+                                <span data-exclude-simplify="true" class="">
+                                    {{ cli.company }}
+                                </span>
                             </div>
 
                             <div class="">
