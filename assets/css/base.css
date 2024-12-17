@@ -1,0 +1,452 @@
+/* CSS Document */
+
+@charset"utf-8";
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  /* Firefox */
+  -webkit-box-sizing: border-box;
+  /* Safari */
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dt,
+dd,
+ul,
+ol,
+form,
+input,
+textarea,
+th,
+td,
+select {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #666;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  outline: none;
+}
+
+i {
+  font-style: normal;
+}
+
+img {
+  border: none;
+  max-width: 100%;
+  /* display: block; */
+}
+
+table {
+  border-collapse: collapse;
+}
+
+input,
+select,
+textarea {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+textarea {
+  resize: none;
+  overflow: auto;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666;
+  background: #fff;
+}
+
+.clearfix:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  font-size: 16px;
+  color: #cdcdcd;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  font-size: 16px;
+  color: #cdcdcd;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  font-size: 16px;
+  color: #cdcdcd;
+}
+
+.pc {
+  display: block;
+}
+
+.phone {
+  display: none;
+}
+
+.wrap {
+  max-width: 1440px;
+  min-width: 320px;
+  margin: 0 auto;
+}
+
+.max1920 {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.bossgoo-com-item {
+  padding-top: 80px;
+}
+
+.bossgoo-com-item .first-title {
+  /* font-family: var(--fontRegular); */
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.text-hidden1 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.text-hidden2 {
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.text-hidden3 {
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url('../fonts/barlow-regular-webfont.woff2') format('woff2'), url('../fonts/barlow-regular-webfont.woff') format('woff'), url('../fonts/barlow-regular-webfont.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'poppinsregular';
+  src: url('../fonts/POPPINS-REGULAR.woff') format('woff'), url('../fonts/POPPINS-REGULAR.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AcademyC';
+  src: url('../fonts/AcademyC.woff') format('woff'), url('../fonts/AcademyC.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aleo';
+  src: url('../fonts/ALEO.woff') format('woff'), url('../fonts/ALEO.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bitter';
+  src: url('../fonts/Bitter-Regular.woff') format('woff'), url('../fonts/Bitter-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ChunkFive';
+  src: url('../fonts/ChunkFive-Regular.woff') format('woff'), url('../fonts/ChunkFive-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Dosis';
+  src: url('../fonts/Dosis-Regular.woff') format('woff'), url('../fonts/Dosis-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Heebo';
+  src: url('../fonts/Heebo-Regular-7.woff') format('woff'), url('../fonts/Heebo-Regular-7.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* @font-face {
+  font-family: 'Helvetica';
+  src: url('../fonts/Helvetica.woff') format('woff'), url('../fonts/Helvetica.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+} */
+
+@font-face {
+  font-family: 'Hind';
+  src: url('../fonts/Hind-Regular-5.woff') format('woff'), url('../fonts/Hind-Regular-5.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'impact';
+  src: url('../fonts/impact.woff') format('woff'), url('../fonts/impact.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/LATO-REGULAR.woff') format('woff'), url('../fonts/LATO-REGULAR.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ostrich Sans';
+  src: url('../fonts/ostrich-regular.woff') format('woff'), url('../fonts/ostrich-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'latoregular';
+  src: url('../fonts/lato-regular-webfont.woff2') format('woff2'), url('../fonts/lato-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* @font-face {
+    font-family: 'poppinsregular';
+    src: url('../fonts/poppins-regular-webfont.woff2') format('woff2'),
+         url('../fonts/poppins-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'fin_serif_displayregular';
+    src: url('../fonts/finserifdisplay-regular-webfont.woff2') format('woff2'),
+         url('../fonts/finserifdisplay-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'latoregular';
+    src: url('../fonts/lato-regular-webfont.woff2') format('woff2'),
+         url('../fonts/lato-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+} */
+@media only screen and (max-width:1480px) {
+  .wrap{
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+@media only screen and (max-width:1040px) {
+  html {
+    font-size: 50px;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-overflow-scrolling: auto;
+  }
+  body {
+    font-size: .36rem;
+    overflow-x: hidden;
+  }
+  .pc {
+    display: none;
+  }
+  .phone {
+    display: block;
+  }
+  .wrap{
+    padding: 0;
+  }
+  .wrap{
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  .bossgoo-com-item {
+    padding-top: .6rem;
+  }
+  .bossgoo-com-item .first-title {
+    font-size: .6rem;
+    margin-bottom: .3rem;
+  }
+}
+
+@media only screen and (max-width:767px) {
+  body {
+    font-size: .28rem;
+  }
+  .bossgoo-com-item {
+    padding-top: .6rem;
+  }
+  .bossgoo-com-item .first-title {
+    font-size: .44rem;
+    margin-bottom: .3rem;
+  }
+}
+
+
+/*==========以下部分是Validform必须的===========*/
+
+.Validform_checktip {
+  line-height: 20px;
+  height: 20px;
+  overflow: hidden;
+  color: #999;
+  font-size: 12px;
+}
+
+.Validform_right {
+  color: #71b83d;
+}
+
+.Validform_wrong {
+  color: red;
+  white-space: nowrap;
+}
+
+.Validform_loading {
+  padding-left: 20px;
+  background: url(../images/onLoad.gif) no-repeat left center;
+}
+
+.Validform_error {
+  background-color: #ffe7e7;
+}
+
+#Validform_msg {
+  color: #7d8289;
+  font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif;
+  width: 280px;
+  -webkit-box-shadow: 2px 2px 3px #aaa;
+  -moz-box-shadow: 2px 2px 3px #aaa;
+  background: #fff;
+  position: absolute;
+  top: 0px;
+  right: 50px;
+  z-index: 99999;
+  display: none;
+  filter: progid: DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#999999');
+}
+
+#Validform_msg .iframe {
+  position: absolute;
+  left: 0px;
+  top: -1px;
+  z-index: -1;
+}
+
+#Validform_msg .Validform_title {
+  line-height: 25px;
+  height: 25px;
+  text-align: left;
+  font-weight: bold;
+  padding: 0 8px;
+  color: #fff;
+  position: relative;
+  background-color: #000;
+}
+
+#Validform_msg a.Validform_close:link,
+#Validform_msg a.Validform_close:visited {
+  line-height: 22px;
+  position: absolute;
+  right: 8px;
+  top: 0px;
+  color: #fff;
+  text-decoration: none;
+}
+
+#Validform_msg a.Validform_close:hover {
+  color: #cc0;
+}
+
+#Validform_msg .Validform_info {
+  padding: 8px;
+  border: 1px solid #000;
+  border-top: none;
+  text-align: left;
+}
