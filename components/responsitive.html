@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Mega Menu</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu-item {
+    position: relative;
+}
+
+.menu-item a {
+    display: block;
+    padding: 14px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu-item a:hover {
+    background-color: #575757;
+}
+
+.mega-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 39px; /* This number depends on height of the "a" tag */
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    background: white;
+    transition: all 0.3s ease 0.15s;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25), 0 5px 20px 0 rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.mega-menu-content {
+    display: flex;
+    padding: 20px;
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+}
+
+.column h3 {
+    margin-top: 0;
+}
+
+.column a {
+    display: block;
+    padding: 5px 0;
+    color: black;
+    text-decoration: none;
+}
+
+.column a:hover {
+    background-color: #f1f1f1;
+}
+
+.menu-item:hover .mega-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu-item {
+        width: 100%;
+    }
+
+    .mega-menu-content {
+        flex-direction: column;
+    }
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="menu">
+            <li class="menu-item">
+                <a href="#">Home</a>
+            </li>
+            <li class="menu-item">
+                <a href="#">Services</a>
+                <div class="mega-menu">
+                    <div class="mega-menu-content">
+                        <div class="column">
+                            <h3>Service 1</h3>
+                            <a href="#">Sub Service 1</a>
+                            <a href="#">Sub Service 2</a>
+                        </div>
+                        <div class="column">
+                            <h3>Service 2</h3>
+                            <a href="#">Sub Service 1</a>
+                            <a href="#">Sub Service 2</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="menu-item">
+                <a href="#">About</a>
+            </li>
+            <li class="menu-item">
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
